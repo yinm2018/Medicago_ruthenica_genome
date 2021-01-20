@@ -11,7 +11,7 @@ yinm2018@lzu.edu.cn; rengp@lzu.edu.cn
 ## Content
 
 - [Genome assembly](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/01.genome_assembly)
-- [Genome annotation](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/02.genome_annoatation)
+- [Genome annotation](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/02.genome_annotation)
 - [LTR insertion time estimation](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/03.LTR_insertion_time)
 - [Population genomics](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/04.population_genomics)
 

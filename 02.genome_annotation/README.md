@@ -1,6 +1,6 @@
 # Genome annotaion of Medicago ruthenica
 
-## 1.Identification of repetitive elements
+## (1) Identification of repetitive elements
 
 ### TRF
 
@@ -31,7 +31,7 @@ RepeatMasker/RepeatModeler/RepeatModeler -pa 25 -database Medru 2>&1 | tee 02.Re
 ```
 
 
-## 2.Gene Prediction
+## (2) Gene Prediction
 
 ### De novo prediction
 

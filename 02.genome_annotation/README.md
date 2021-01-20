@@ -22,7 +22,7 @@ RepeatMasker/RepeatProteinMask -engine abblast -noLowSimple -pvalue 1e-04 Genome
 
 ### RepeatModeler
 
-[run.repeatmodeler.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/blob/main/02.repeat_annotation/run.repeatmodeler.pl)
+[run.repeatmodeler.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/blob/main/02.genome_annotation/run.repeatmodeler.pl)
 
 ```
 RepeatMasker/RepeatModeler/BuildDatabase -name Medru Genome.fa 2>&1 | tee 01.BuildDatabase.log

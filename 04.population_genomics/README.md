@@ -82,12 +82,12 @@ java -jar GenomeAnalysisTK.jar -T VariantFiltration -R reference.fa -V Pop.INDEL
 
 #### remove hdfilter
 
-[01.hardfit.fix.indel.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/04.snp_calling/01.hardfit.fix.indel.pl)
+[01.hardfit.fix.indel.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/04.population_genomics/01.hardfit.fix.indel.pl)
 ```
 perl 01.hardfit.fix.indel.pl Pop.HDflt.INDEL.vcf.gz Pop.HDflted.INDEL.vcf.gz
 ```
 
-[01.hardfit.fix.snp.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/04.snp_calling/01.hardfit.fix.snp.pl)
+[01.hardfit.fix.snp.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/04.population_genomics/01.hardfit.fix.snp.pl)
 
 ```
 perl 01.hardfit.fix.snp.pl Pop.HDflt.SNP.vcf.gz Pop.HDflted.SNP.vcf.gz
@@ -95,7 +95,7 @@ perl 01.hardfit.fix.snp.pl Pop.HDflt.SNP.vcf.gz Pop.HDflted.SNP.vcf.gz
 
 #### filtering SNPs within 5bp upstream & downstream of InDels
 
-[02.flt.indel.5bp.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/04.snp_calling/02.flt.indel.5bp.pl)
+[02.flt.indel.5bp.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/04.population_genomics/02.flt.indel.5bp.pl)
 
 ```
 perl 02.flt.indel.5bp.pl -vcf Pop.HDflted.SNP.vcf.gz -indel Pop.HDflted.INDEL.vcf.gz -p 10 | gzip -c > Pop.HDflted.flt.5bp.SNP.vcf.gz

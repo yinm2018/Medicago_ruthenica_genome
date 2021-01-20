@@ -1,6 +1,6 @@
 # Genome assembly of Medicago ruthenica
 
-## 1)Contig Assembly and Polish
+## 1) Contig Assembly and Polish
 
 ### Canu (version 1.8)
 ```
@@ -93,21 +93,22 @@ java -Xmx150G -jar pilon-1.22.jar --genome draft.fa --frags align.bam
 ```
 
 
-## 2)Chromosome-scale assembly by Hi-C data
+## 2) Chromosome-scale assembly based on Hi-C data
 
+### BWA
+```
+bwa index draft.genome
+```
 
 ### Juicer
 ```
-bwa index draft.genome
 juicer/misc/generate_site_positions.py MboI your_species_name draft.genome
 juicer/scripts/juicer.sh -g your_species_name -s MboI -z draft.genome -p assembly -y restriction_sites_path/Mru_MboI.txt -D juicer -d your_work_path -t 30 -S early
 ```
 
-### 3d-dna
+### LANCHESIS
 
-```
-3d-dna/run-asm-pipeline.sh -r 2 genome.fa merged_nodups.txt
-```
+The pseudochromsomes was constructed by LANCHESIS with default parameters.
 
 
 ## 3) Genome Statistics

@@ -117,7 +117,7 @@ cd admixture
 admixture --cv -j30 -B[100] Pop.final.SNP.vcf.extract.ped Pop_number > Pop.final.SNP.vcf.extract.log.out
 ```
 
-## (3) Pop_history
+## (3) Population history
 
 ### [psmc](https://github.com/lh3/psmc)
 

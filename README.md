@@ -1,4 +1,4 @@
-# Workflow and custom scripts of Medicago ruthenica genomic analysis
+# Workflow and custom scripts of *Medicago ruthenica* genomic analysis
 
 ## Authors
 

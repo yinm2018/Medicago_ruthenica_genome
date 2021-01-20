@@ -110,7 +110,7 @@ juicer/scripts/juicer.sh -g your_species_name -s MboI -z draft.genome -p assembl
 ```
 
 
-## 3)Genome Statistics
+## 3) Genome Statistics
 
 - Genome Size  [00.statistics.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/blob/main/00.genome.statistic/00.statistic.pl)
 - Scaffold Length [00.statistics.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/blob/main/00.genome.statistic/00.statistic.pl)

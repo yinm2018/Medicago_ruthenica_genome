@@ -1,11 +1,16 @@
 # Genome assembly of Medicago ruthenica
 
-## 1) Contig Assembly and Polish
+The genome assembly of Medicago ruthenica 
+
+## 1) Contig Assembly
 
 ### Canu (version 1.8)
+
+The cleaned PacBio long reads were corrected for subsequent contig assembly by Canu.  
+
 ```
- canu -correct -p GS180050-03 -d Canu –pacbio merged.subreads.fasta genomeSize=902970000 corOutCoverage=80 saveOverlaps=false
- ```
+canu -correct -p GS180050-03 -d Canu –pacbio merged.subreads.fasta genomeSize=902970000 corOutCoverage=80 saveOverlaps=false
+```
 
 ### [SmartDenovo](https://github.com/ruanjue/smartdenovo)
 
@@ -58,12 +63,19 @@ length_cutoff_pr=5000
 
 ### [Quickmerge](https://github.com/mahulchak/quickmerge)
 
+The two version assembly results from FALCON and SmartDenove were integrated by Quickmerge.
+
 ```
 quickmerge -hco 5.0 -c 1.5 -lm 5000 -l 300000
 nucmer -l 100 -p out self_oneline.fa hybrid_oneline.fa
 delta-filter -i 95 -r -q out.delta >out.rq.delta
 quickmerge -d out.rq.delta -q hybrid_oneline.fa -r self_oneline.fa -hco 5.0 -c 1.5 -lm 5000 -l 10000
 ```
+
+
+## 2) The Polish of Contig-scale Assembly
+
+The contig-scale pre-assembly was polished by Illumina and PacBio clean subreads.
 
 ### blasr(version5.3.2)
 
@@ -93,14 +105,16 @@ java -Xmx150G -jar pilon-1.22.jar --genome draft.fa --frags align.bam
 ```
 
 
-## 2) Chromosome-scale assembly based on Hi-C data
+## 3) Chromosome-scale assembly based on Hi-C data
 
-### BWA
+### BWA (version 0.7.9a)
+
 ```
 bwa index draft.genome
 ```
 
 ### Juicer
+
 ```
 juicer/misc/generate_site_positions.py MboI your_species_name draft.genome
 juicer/scripts/juicer.sh -g your_species_name -s MboI -z draft.genome -p assembly -y restriction_sites_path/Mru_MboI.txt -D juicer -d your_work_path -t 30 -S early
@@ -111,8 +125,15 @@ juicer/scripts/juicer.sh -g your_species_name -s MboI -z draft.genome -p assembl
 The pseudochromsomes was constructed by LANCHESIS with default parameters.
 [https://github.com/shendurelab/LACHESIS](https://github.com/shendurelab/LACHESIS)
 
+### Juicebox
 
-## 3) Genome Statistics
+The visual error correction for chromsome-scale pre-assembly was accomplished by Juicebox.
+[https://github.com/aidenlab/Juicebox](https://github.com/aidenlab/Juicebox)
+
+
+## 4) Genome Statistics
+
+The general imformation statistics for the genome.
 
 - Genome Size  [00.statistics.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/blob/main/00.genome.statistic/00.statistic.pl)
 - Scaffold Length [00.statistics.pl](https://github.com/yinm2018/Medicago_ruthenica_genome/blob/main/00.genome.statistic/00.statistic.pl)

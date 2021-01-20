@@ -1,6 +1,6 @@
 # Population Genetics Analysis of Medicago ruthenica
 
-## 1) SNP Calling
+## (1) SNP Calling
 
 ### 1.Mapping Reads To The Reference Genome
 
@@ -108,7 +108,7 @@ vcftools --gzvcf Pop.HDflted.flt.5bp.SNP.vcf.gz --maf 0.05 --min-meanDP 3 --max-
 ```
 
 
-## 2) Admixture
+## (2) Admixture
 
 ```
 vcftools --vcf Pop.final.SNP.vcf --plink --out Pop.final.SNP.vcf
@@ -117,7 +117,7 @@ cd admixture
 admixture --cv -j30 -B[100] Pop.final.SNP.vcf.extract.ped Pop_number > Pop.final.SNP.vcf.extract.log.out
 ```
 
-## 3) Pop_history
+## (3) Pop_history
 
 ### [psmc](https://github.com/lh3/psmc)
 

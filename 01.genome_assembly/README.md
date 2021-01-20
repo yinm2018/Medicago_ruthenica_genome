@@ -2,7 +2,7 @@
 
 The genome assembly of Medicago ruthenica 
 
-## 1) Contig Assembly
+## (1) Contig Assembly
 
 ### Canu (version 1.8)
 
@@ -73,7 +73,7 @@ quickmerge -d out.rq.delta -q hybrid_oneline.fa -r self_oneline.fa -hco 5.0 -c 1
 ```
 
 
-## 2) The Polish of Contig-scale Assembly
+## (2) The Polish of Contig-scale Assembly
 
 The contig-scale pre-assembly was polished by Illumina and PacBio clean subreads.
 
@@ -105,7 +105,7 @@ java -Xmx150G -jar pilon-1.22.jar --genome draft.fa --frags align.bam
 ```
 
 
-## 3) Chromosome-scale assembly based on Hi-C data
+## (3) Chromosome-scale assembly based on Hi-C data
 
 ### BWA (version 0.7.9a)
 
@@ -131,7 +131,7 @@ The visual error correction for chromsome-scale pre-assembly was accomplished by
 [https://github.com/aidenlab/Juicebox](https://github.com/aidenlab/Juicebox)
 
 
-## 4) Genome Statistics
+## (4) Genome Statistics
 
 The general imformation statistics for the genome.
 

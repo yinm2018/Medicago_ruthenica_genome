@@ -18,7 +18,7 @@ canu -correct -p GS180050-03 -d Canu –pacbio merged.subreads.fasta genomeSize=
 perl smartdenovo.pl –k 16 –J 5000 –p GS180050-03
 ```
 
-### FALCON(version 3.1)
+### FALCON (version 3.1)
 
 ```
 fc_run  fc_run.cfg
@@ -77,21 +77,21 @@ quickmerge -d out.rq.delta -q hybrid_oneline.fa -r self_oneline.fa -hco 5.0 -c 1
 
 The contig-scale pre-assembly was polished by Illumina and PacBio clean subreads.
 
-### blasr(version5.3.2)
+### blasr (version5.3.2)
 
 ```
 blasr merged.subreads.fasta genome.fa --out blasr.bam --bam --bestn 5 --minMatch 18 --nproc 4 --minSubreadLength 1000 --minAlnLength 500 --minPctSimila rity 70 --minPctAccu
 racy70 --hitPolicy randombest --randomSeed 1
 ```
 
-### arrow(version2.2.2)
+### arrow (version2.2.2)
 
 ```
 samtools faidx genome.fa
 arrow --algorithm=arrow -v -j8 blasr.bam -r merged.fasta -o genome.fa
 ```
 
-### bwa(version 0.7.9a) samtools(version 0.1.19)
+### bwa(version 0.7.9a), samtools (version 0.1.19)
 
 ```
 bwa index -p genome genome.fa

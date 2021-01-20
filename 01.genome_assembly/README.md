@@ -6,7 +6,7 @@ The genome assembly of Medicago ruthenica
 
 ### Canu (version 1.8)
 
-The cleaned PacBio long reads were corrected for subsequent contig assembly by Canu.  
+The cleaned PacBio long reads were corrected by Canu for subsequent contig assembly.  
 
 ```
 canu -correct -p GS180050-03 -d Canu –pacbio merged.subreads.fasta genomeSize=902970000 corOutCoverage=80 saveOverlaps=false

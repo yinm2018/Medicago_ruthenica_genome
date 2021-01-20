@@ -109,6 +109,7 @@ juicer/scripts/juicer.sh -g your_species_name -s MboI -z draft.genome -p assembl
 ### LANCHESIS
 
 The pseudochromsomes was constructed by LANCHESIS with default parameters.
+[https://github.com/shendurelab/LACHESIS](https://github.com/shendurelab/LACHESIS)
 
 
 ## 3) Genome Statistics

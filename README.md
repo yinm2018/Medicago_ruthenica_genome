@@ -8,6 +8,9 @@ Mou Yin, Shangzhe Zhang, Xin Du, Ruben Mateo, Wei Guo, Ao Li, Zhenyue Wang, Shua
 
 yinm2018@lzu.edu.cn; rengp@lzu.edu.cn
 
+## Genome annotation of Medicago ruthenica
+
+[Mru.final.gff3.gz](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/Mru.final.gff3.gz)
 ## Content
 
 - [Genome assembly](https://github.com/yinm2018/Medicago_ruthenica_genome/tree/main/01.genome_assembly)
